@@ -7,3 +7,6 @@
 [submodule "lib/lsm6ds3tr-api"]
 	path = lib/lsm6ds3tr-api
 	url = https://github.com/STMicroelectronics/lsm6ds3tr-c-pid.git
+[submodule "lib/BNO055_SensorAPI"]
+	path = lib/BNO055_SensorAPI
+	url = https://github.com/boschsensortec/BNO055_SensorAPI.git

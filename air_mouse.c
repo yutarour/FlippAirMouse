@@ -58,7 +58,6 @@ AirMouse* air_mouse_app_alloc() {
 
     // Gui
     app->gui = furi_record_open(RECORD_GUI);
-
     // View dispatcher
     app->view_dispatcher = view_dispatcher_alloc();
     view_dispatcher_attach_to_gui(app->view_dispatcher, app->gui, ViewDispatcherTypeFullscreen);
@@ -98,7 +97,8 @@ AirMouse* air_mouse_app_alloc() {
 
     app->error_dialog = dialog_ex_alloc();
     dialog_ex_set_header(app->error_dialog, "Failed to init IMU", 63, 0, AlignCenter, AlignTop);
-    dialog_ex_set_text(app->error_dialog, "Please connect sensor module", 63, 30, AlignCenter, AlignTop);
+    dialog_ex_set_text(
+        app->error_dialog, "Please connect sensor module", 63, 30, AlignCenter, AlignTop);
     view_set_previous_callback(dialog_ex_get_view(app->error_dialog), air_mouse_exit);
     view_dispatcher_add_view(
         app->view_dispatcher, AirMouseViewError, dialog_ex_get_view(app->error_dialog));

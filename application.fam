@@ -27,5 +27,6 @@ App(
             name="lsm6dso-api",
             cflags=["-Wno-error"],
         ),
+        Lib(name="BNO055_SensorAPI", cflags=["-Wno-error"]),
     ],
 )
