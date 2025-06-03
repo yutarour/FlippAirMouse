@@ -1,6 +1,6 @@
 App(
     appid="air_mouse",
-    name="BMI Air Mouse",
+    name="BMI Air Mouse (New)",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="air_mouse_app",
     stack_size=10 * 1024,
@@ -27,5 +27,6 @@ App(
             name="lsm6dso-api",
             cflags=["-Wno-error"],
         ),
+        Lib(name="BNO055_SensorAPI", cflags=["-Wno-error"]),
     ],
 )
